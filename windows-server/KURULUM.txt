@@ -1,0 +1,48 @@
+REMOTECONTROL – WINDOWS KURULUMU
+================================
+
+İLK KURULUM (her bilgisayarda bir kez)
+--------------------------------------
+1. Bu zip'i bilgisayarda bir klasöre çıkarın (sağ tık -> Tümünü ayıkla).
+   Önemli: Zip'in içinden doğrudan çalıştırmayın, önce çıkarın.
+
+2. firewall_setup.bat -> sağ tık -> "Yönetici olarak çalıştır"
+   (iPhone'un bilgisayara ulaşabilmesi için güvenlik duvarı izni.)
+
+3. build.bat -> çift tıklayın.
+   - Python yoksa otomatik kurulur ("Değişikliklere izin ver" -> Evet).
+   - Birkaç dakika sürer; terminali sadece bu sefer görürsünüz.
+   - Bitince RemoteControl.exe Masaüstüne kopyalanır ve başlar.
+
+4. Windows "Windows kişisel bilgisayarınızı korudu" derse:
+   "Ek bilgi" -> "Yine de çalıştır".
+   "Ağ erişimine izin verilsin mi?" sorulursa -> "İzin ver".
+
+5. Sağ altta (saat yanında, gerekirse ^ okuna tıklayın) RemoteControl ikonu görünür.
+
+6. iPhone'da RemoteControl uygulamasını açın (telefon ve PC aynı Wi-Fi'de olmalı).
+   - PC otomatik bulunur ve bağlanır.
+   - Başka bir PC'ye kayıtlıysa: Ayarlar -> "Kayıtlı bilgisayarı unut".
+   - Bulamazsa: PC'de tepsi ikonu -> sağ tık -> "Bağlantı QR Kodunu Göster",
+     iPhone'da QR simgesine dokunup kodu okutun.
+
+GÜNLÜK KULLANIM
+---------------
+- Masaüstündeki RemoteControl.exe'ye çift tıklayın. Terminal açılmaz, sadece tepsi ikonu çıkar.
+- Kapatmak için: tepsi ikonu -> sağ tık -> Kapat.
+- Windows ile otomatik başlamaz. İsterseniz tepsi menüsünden "Windows ile başlat" işaretlenebilir.
+
+BAŞKA BİLGİSAYARA TAŞIMA
+------------------------
+- Sadece Masaüstündeki RemoteControl.exe yeterlidir (Python gerekmez).
+- Yeni bilgisayarda yalnızca firewall_setup.bat'ı bir kez yönetici olarak çalıştırın.
+
+SORUN GİDERME
+-------------
+- iPhone bağlanamıyor: PC ve telefon aynı Wi-Fi'de mi? firewall_setup.bat çalıştırıldı mı?
+- İmleç çok hızlı/tutarsız: Ayarlar -> Bluetooth ve cihazlar -> Fare -> Ek fare ayarları ->
+  İşaretçi Seçenekleri -> "İşaretçi hassasiyetini artır" kapatın.
+  Hız iPhone uygulamasının Ayarlar ekranından da değiştirilebilir.
+- Görev Yöneticisi gibi yönetici pencerelerinde çalışmıyor: RemoteControl.exe'ye sağ tık ->
+  "Yönetici olarak çalıştır".
+- Ayarlar ve log: %APPDATA%\RemoteControl\
